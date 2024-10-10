@@ -33,14 +33,14 @@ public class Task {
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
-    private com.bastola.taskorganizer.OrganizeIt.Entities.User user;
+    private com.bastola.taskorganizer.OrganizeIt.entities.User user;
 
     // Constructors
     public Task() {
         // Default constructor for JPA
     }
 
-    public Task(String title, String description, TaskStatus status, LocalDateTime dueDate, com.bastola.taskorganizer.OrganizeIt.Entities.User user) {
+    public Task(String title, String description, TaskStatus status, LocalDateTime dueDate, com.bastola.taskorganizer.OrganizeIt.entities.User user) {
         this.title = title;
         this.description = description;
         this.status = status;
@@ -108,11 +108,11 @@ public class Task {
         this.updatedAt = updatedAt;
     }
 
-    public com.bastola.taskorganizer.OrganizeIt.Entities.User getUser() {
+    public com.bastola.taskorganizer.OrganizeIt.entities.User getUser() {
         return user;
     }
 
-    public void setUser(com.bastola.taskorganizer.OrganizeIt.Entities.User user) {
+    public void setUser(com.bastola.taskorganizer.OrganizeIt.entities.User user) {
         this.user = user;
     }
 
